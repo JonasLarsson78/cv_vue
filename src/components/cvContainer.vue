@@ -13,6 +13,15 @@
             ><img class="arrowImgNext" src="../assets/arrow.svg" alt="logo"
           /></span>
         </div>
+        <div class="footerLink">
+          Koden till CV på
+          <a
+            class="footerLinkText"
+            href="https://github.com/JonasLarsson78/cv_vue"
+            target="_blank"
+            >Github</a
+          >
+        </div>
         <div class="footerText">© 2020 Jonas Larsson All Rights Reserved</div>
       </div>
     </span>
@@ -32,6 +41,15 @@
             alt="logo"
           />Tillbaka
           <span></span>
+        </div>
+        <div class="footerLink">
+          Koden till CV på
+          <a
+            class="footerLinkText"
+            href="https://github.com/JonasLarsson78/cv_vue"
+            target="_blank"
+            >Github</a
+          >
         </div>
         <div class="footerText">© 2020 Jonas Larsson All Rights Reserved</div>
       </div>
@@ -116,9 +134,23 @@ export default {
   color: #115e75;
   z-index: 100;
 }
+.footerLink {
+  position: absolute;
+  font-size: 12px;
+  bottom: 23px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #115e75;
+  z-index: 100;
+}
+.footerLinkText {
+  text-decoration: none;
+  color: #115e75;
+  font-weight: bold;
+}
 .next {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   left: 50%;
   transform: translate(-50%);
   color: #115e75;
@@ -152,6 +184,9 @@ export default {
     width: 360px;
     flex-direction: column;
     height: 1400px;
+  }
+  .footerLink {
+    bottom: 35px;
   }
 }
 </style>

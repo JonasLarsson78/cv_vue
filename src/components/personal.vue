@@ -202,6 +202,7 @@ export default {
   z-index: 1000;
   border: 1px solid black;
   border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px #000000bf;
 }
 .closeBtn {
   width: 50px;
