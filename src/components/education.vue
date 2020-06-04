@@ -1,0 +1,155 @@
+<template>
+  <div class="educationContanier">
+    <img class="educationImg" src="../assets/utbilding.svg" alt="logo" />
+    <div class="educationHeader">Utbildning</div>
+    <hr />
+    <div>
+      <span v-for="(ed, index) in data.items" :key="index">
+        <table class="educationTables" border="0">
+          <thead>
+            <tr>
+              <th>Datum:</th>
+              <th>Namn:</th>
+              <th>Skola:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tdDatum">{{ ed.rightSide }}</td>
+              <td class="tdTitle">{{ ed.title }}</td>
+              <td>{{ ed.authority }}</td>
+            </tr>
+            <tr v-if="ed.authorityWebSite">
+              <td colspan="3">
+                <img
+                  class="educationImgLink"
+                  src="../assets/home.svg"
+                  alt="logo"
+                />
+                <a
+                  class="edLink"
+                  :href="`${ed.authorityWebSite}`"
+                  target="_blank"
+                  >Hemsida</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tagContainer">
+          <div
+            class="tag"
+            v-show="ed.descriptionTags"
+            v-for="(tag, index) in ed.descriptionTags"
+            :key="index"
+          >
+            <span class="tagText">{{ tag }}</span>
+          </div>
+        </div>
+        <hr />
+      </span>
+    </div>
+  </div>
+</template>
+
+<script>
+import { data } from '../data/data';
+
+export default {
+  name: 'Education',
+  data() {
+    return {
+      data: {},
+    };
+  },
+  created: function() {
+    const find = data.sections.find((x) => x.title === 'Utbildning');
+    this.data = find;
+  },
+};
+</script>
+
+<style scoped>
+th {
+  text-align: left;
+}
+td {
+  text-align: left;
+}
+
+.educationContanier {
+  position: relative;
+
+  height: 400px;
+  width: calc(100% - 25px);
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+}
+.educationHeader {
+  position: relative;
+  top: -17px;
+  left: 50px;
+  color: #115e75;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+.educationImg {
+  position: relative;
+  top: 10px;
+  left: -320px;
+  width: 30px;
+  filter: #115e75;
+}
+.educationImgLink {
+  position: relative;
+  top: 3px;
+  width: 20px;
+}
+.educationTables {
+  width: 100%;
+  padding: 5px;
+}
+.tdDatum {
+  width: 150px;
+}
+.tdTitle {
+  width: 200px;
+  font-weight: bold;
+}
+.edLink {
+  margin-left: 5px;
+  text-decoration: none;
+  color: #115e75;
+}
+.edLink:hover {
+  font-weight: bold;
+}
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  height: 30px;
+  background-color: #115e75;
+  width: 150px;
+  border-radius: 15px;
+  margin: 5px;
+}
+.tagText {
+  position: relative;
+  top: 5px;
+  text-align: center;
+  color: white;
+}
+@media only screen and (max-device-width: 901px) {
+  .educationContanier {
+    width: 330px;
+  }
+  .educationImg {
+    left: -150px;
+  }
+}
+</style>
