@@ -30,16 +30,16 @@
       >
         <div class="iconsText">
           <span v-if="contact.type === 'location'">
-            <div><img class="icons" src="../assets/location.svg" /></div>
+            <div><img class="icons" src="../assets/svg/location.svg" /></div>
             {{ contact.value }}</span
           >
           <span v-else-if="contact.type === 'phone'"
-            ><div><img class="icons" src="../assets/phone.svg" /></div>
+            ><div><img class="icons" src="../assets/svg/phone.svg" /></div>
             {{ contact.value }}</span
           >
 
           <span v-else-if="contact.type === 'email'">
-            <div><img class="icons" src="../assets/mail.svg" /></div>
+            <div><img class="icons" src="../assets/svg/mail.svg" /></div>
             <a
               class="iconTextLink"
               :href="`mailto:${contact.value}`"
@@ -49,7 +49,7 @@
           >
 
           <span v-else-if="contact.type === 'github'">
-            <div><img class="icons" src="../assets/github.svg" /></div>
+            <div><img class="icons" src="../assets/svg/github.svg" /></div>
             <a
               class="iconTextLink"
               :href="`http://${contact.value}`"
@@ -58,7 +58,7 @@
             ></span
           >
           <span v-else-if="contact.type === 'webpage'">
-            <div><img class="icons" src="../assets/home2.svg" /></div>
+            <div><img class="icons" src="../assets/svg/home2.svg" /></div>
             <a
               class="iconTextLink"
               :href="`http://${contact.value}`"
@@ -67,7 +67,7 @@
             ></span
           >
           <span v-else>
-            <div><img class="icons" src="../assets/linkedin.svg" /></div>
+            <div><img class="icons" src="../assets/svg/linkedin.svg" /></div>
             <a
               class="iconTextLink"
               :href="`http://${contact.value}`"

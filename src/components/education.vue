@@ -1,6 +1,6 @@
 <template>
   <div class="educationContanier">
-    <img class="educationImg" src="../assets/utbilding.svg" alt="logo" />
+    <img class="educationImg" src="../assets/svg/utbilding.svg" alt="logo" />
     <div class="educationHeader">Utbildning</div>
     <hr />
     <div>
@@ -23,7 +23,7 @@
               <td colspan="3">
                 <img
                   class="educationImgLink"
-                  src="../assets/home.svg"
+                  src="../assets/svg/home.svg"
                   alt="logo"
                 />
                 <a
@@ -38,7 +38,7 @@
               <td colspan="3">
                 <img
                   class="educationImgLink"
-                  src="../assets/utbilding.svg"
+                  src="../assets/svg/utbilding.svg"
                   alt="logo"
                 />
                 <a class="edLink" :href="`${ed.certificate}`" target="_blank"

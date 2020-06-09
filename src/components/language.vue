@@ -1,6 +1,6 @@
 <template>
   <div class="langContanier">
-    <img class="langImg" src="../assets/lang.svg" alt="logo" />
+    <img class="langImg" src="../assets/svg/lang.svg" alt="logo" />
     <div class="langHeader">Språk</div>
     <hr class="hr" />
     <TagInfo :tags="lang" />

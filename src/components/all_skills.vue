@@ -1,6 +1,6 @@
 <template>
   <div class="allSkillsContanier">
-    <img class="allSkillsImg" src="../assets/allskills.svg" alt="logo" />
+    <img class="allSkillsImg" src="../assets/svg/allskills.svg" alt="logo" />
     <div class="allSkillsHeader">Alla Färdigheter</div>
     <hr class="hr" />
     <TagInfo :tags="items" />

@@ -10,7 +10,7 @@
         <div @click="nextPage(true)" class="next">
           Nästa sida
           <span
-            ><img class="arrowImgNext" src="../assets/arrow.svg" alt="logo"
+            ><img class="arrowImgNext" src="../assets/svg/arrow.svg" alt="logo"
           /></span>
         </div>
         <div class="footerLink">
@@ -37,7 +37,7 @@
         <div @click="nextPage(false)" class="next">
           <img
             class="arrowImgPrev"
-            src="../assets/arrow.svg"
+            src="../assets/svg/arrow.svg"
             alt="logo"
           />Tillbaka
           <span></span>

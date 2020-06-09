@@ -1,6 +1,6 @@
 <template>
   <div class="hobbyContanier">
-    <img class="hobbyImg" src="../assets/hobby.svg" alt="logo" />
+    <img class="hobbyImg" src="../assets/svg/hobby.svg" alt="logo" />
     <div class="hobbysHeader">Hobbys & Intressen</div>
     <hr class="hr" />
     <div class="tagContainer">

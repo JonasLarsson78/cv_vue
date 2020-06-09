@@ -1,6 +1,6 @@
 <template>
   <div class="experienceContanier">
-    <img class="experienceImg" src="../assets/experience.svg" alt="logo" />
+    <img class="experienceImg" src="../assets/svg/experience.svg" alt="logo" />
     <div class="experienceHeader">Arbetslivserfarenhet</div>
     <hr />
     <div>
@@ -26,7 +26,7 @@
               <td colspan="3">
                 <img
                   class="experienceImgLink"
-                  src="../assets/home.svg"
+                  src="../assets/svg/home.svg"
                   alt="logo"
                 />
                 <a class="edLink" :href="`${ed.companyWebSite}`" target="_blank"
