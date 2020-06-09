@@ -178,12 +178,12 @@ export default {
   .cvContainer {
     width: 360px;
     flex-direction: column;
-    height: 2500px;
+    height: 2250px;
   }
   .cvContainer2 {
     width: 360px;
     flex-direction: column;
-    height: 1400px;
+    height: 1150px;
   }
   .footerLink {
     bottom: 35px;

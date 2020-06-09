@@ -1,7 +1,9 @@
 <template>
   <div class="skillContainer">
     <div class="skillText">{{ this.str }}</div>
-    <div class="skill"><div :class="`skillFill ${this.pros}`"></div></div>
+    <div class="skill">
+      <div :title="this.procent" :class="`skillFill ${this.name}`"></div>
+    </div>
   </div>
 </template>
 
@@ -10,7 +12,12 @@ export default {
   name: 'Skills',
   props: {
     str: String,
-    pros: String,
+    name: String,
+    procent: String,
+  },
+  created: function() {
+    let root = document.documentElement;
+    root.style.setProperty(`--procent${this.name}`, this.procent);
   },
 };
 </script>
@@ -43,31 +50,31 @@ export default {
 }
 /*------------------ Skills --------------*/
 .html {
-  width: 98%;
+  width: var(--procenthtml);
 }
 .css {
-  width: 95%;
+  width: var(--procentcss);
 }
 .javascript {
-  width: 90%;
+  width: var(--procentjavascript);
 }
 .react {
-  width: 95%;
+  width: var(--procentreact);
 }
 .node {
-  width: 80%;
+  width: var(--procentnode);
 }
 .vue {
-  width: 78%;
+  width: var(--procentvue);
 }
 .git {
-  width: 70%;
+  width: var(--procentgit);
 }
 .cms {
-  width: 60%;
+  width: var(--procentcms);
 }
 .mongodb {
-  width: 70%;
+  width: var(--procentmongodb);
 }
 /* --------------------------------------- */
 </style>

@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="mobil">
       <div class="personalHeader">OM MIG</div>
       <BollHr />
       <div title="Klicka här!" @click="hoverTextT" class="omMigText">
@@ -97,18 +97,18 @@
       <div class="personalHeader">FÄRDIGHETER</div>
       <BollHr />
       <!-- Skills -->
-      <Skills str="HTML" pros="html" />
-      <Skills str="CSS" pros="css" />
-      <Skills str="JavaScript" pros="javascript" />
-      <Skills str="React.js" pros="react" />
-      <Skills str="Node.js" pros="node" />
-      <Skills str="Vue.js" pros="vue" />
-      <Skills str="Git" pros="git" />
-      <Skills str="CMS" pros="cms" />
-      <Skills str="Mongo DB" pros="mongodb" />
+      <Skills str="HTML" name="html" procent="95%" />
+      <Skills str="CSS" name="css" procent="90%" />
+      <Skills str="JavaScript" name="javascript" procent="85%" />
+      <Skills str="React.js" name="react" procent="90%" />
+      <Skills str="Node.js" name="node" procent="85%" />
+      <Skills str="Vue.js" name="vue" procent="80%" />
+      <Skills str="Git" name="git" procent="90%" />
+      <Skills str="CMS" name="cms" procent="90%" />
+      <Skills str="Mongo DB" name="mongodb" procent="80%" />
       <!-- End skills -->
       <hr class="personalHr" />
-      <div class="version">Cv_Vue V.2.0.1</div>
+      <div class="version">Cv_Vue V.2.0.2</div>
       <div class="end"></div>
     </div>
   </div>
@@ -270,12 +270,6 @@ export default {
     font-size: 12px;
     font-weight: bold;
     margin-top: 20px;
-  }
-  .omMigText {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 280px;
   }
 }
 </style>
