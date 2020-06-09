@@ -104,6 +104,7 @@
       <Skills str="Mongo DB" pros="mongodb" />
       <!-- End skills -->
       <hr class="personalHr" />
+      <div class="version">Cv_Vue V.2.0.1</div>
       <div class="end"></div>
     </div>
   </div>
@@ -229,6 +230,11 @@ export default {
 }
 .end {
   padding-bottom: 20px;
+}
+.version {
+  position: relative;
+  top: 14px;
+  font-size: 12px;
 }
 @media only screen and (max-device-width: 901px) {
   .personalContainer {
