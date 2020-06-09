@@ -7,6 +7,7 @@
         v-for="(tag, index) in tags"
         :key="index"
         @click="findTag(tag)"
+        :title="`Vad är ${tag} ?`"
       >
         <span class="tagText">{{ tag }}</span>
       </div>

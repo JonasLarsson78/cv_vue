@@ -81,12 +81,16 @@
     <div>
       <div class="personalHeader">OM MIG</div>
       <BollHr />
-      <div @click="hoverTextT" class="omMigText">
+      <div title="Klicka här!" @click="hoverTextT" class="omMigText">
         {{ personal.sections[0].content }}
       </div>
       <div v-if="omMig" class="omMigTextLarge">
-        {{ personal.sections[0].content }}
-        <button class="closeBtn" @click="hoverTextF">Stäng</button>
+        {{ personal.sections[0].content }}<br /><button
+          class="closeBtn"
+          @click="hoverTextF"
+        >
+          Stäng
+        </button>
       </div>
     </div>
     <div class="mobil">
@@ -216,17 +220,21 @@ export default {
   box-shadow: 10px 10px 5px 0px #000000bf;
 }
 .closeBtn {
-  width: 50px;
-  height: 25px;
-  border-radius: 13px;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  border: none;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
   background-color: #115e75;
   color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
   outline: none;
-  cursor: pointer;
+}
+.closeBtn:hover {
+  background-color: #1881a1;
 }
 .end {
   padding-bottom: 20px;
