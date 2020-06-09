@@ -26,32 +26,6 @@ export const data = {
     },
     {
       type: 'common-list',
-      title: 'Portfolio',
-      icon: 'rocket',
-      items: [
-        {
-          title: 'Job1 - Ett fiktivt exempel på mina kunskaper.',
-          authority: 'hyreshuset (Github)',
-          authorityWebSite: 'https://github.com/JonasLarsson78/hyreshuset',
-          rightSide: '2020 - present',
-          descriptionTags: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'Git',
-            'Frontend - React.js',
-            'Node.sj',
-            'Firebase Auth',
-            'Firebase Hoting',
-            'UX-Design',
-            '->',
-            'Login: test@test.se - Lösenord: 123456',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'common-list',
       title: 'Utbildning',
       icon: 'graduation',
       items: [
@@ -61,6 +35,8 @@ export const data = {
           authorityWebSite:
             'https://www.ecutbildning.se/utbildningar/frontend-utvecklare/',
           rightSide: '2018 - 2020',
+          certificate:
+            'https://jonas78dev-5798.restdb.io/media/5edfd2ae498ad76800019dd8',
           descriptionTags: [
             'React.js',
             'JavaScript',

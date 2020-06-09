@@ -34,6 +34,18 @@
                 >
               </td>
             </tr>
+            <tr v-if="ed.certificate">
+              <td colspan="3">
+                <img
+                  class="educationImgLink"
+                  src="../assets/utbilding.svg"
+                  alt="logo"
+                />
+                <a class="edLink" :href="`${ed.certificate}`" target="_blank"
+                  >Examensbevis</a
+                >
+              </td>
+            </tr>
           </tbody>
         </table>
         <TagInfo :tags="ed.descriptionTags" />

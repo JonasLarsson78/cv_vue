@@ -156,8 +156,8 @@ export const tagInfo = [
   { items: 'Hårfön', info: 'Info kommer...', from: 'google.se' },
   { items: 'Klippmaskiner', info: 'Info kommer...', from: 'google.se' },
   { items: 'Matkassar', info: 'Info kommer...', from: 'google.se' },
-  { items: 'Budbil', info: 'Info kommer...', from: 'google.se' },
+  { items: 'Budbil', info: 'Info kommer...', from: 'google.se' },*/
   // Language Skills
   { items: 'Svenska', info: 'Mitt modersmål.', from: 'none' },
-  { items: 'Engelska', info: 'Mitt andraspråk.', from: 'none' }, */
+  { items: 'Engelska', info: 'Mitt andraspråk.', from: 'none' },
 ];

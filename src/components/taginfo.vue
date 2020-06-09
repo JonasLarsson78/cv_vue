@@ -102,4 +102,9 @@ export default {
 .from {
   font-size: 12px;
 }
+@media only screen and (max-device-width: 901px) {
+  .infoTag {
+    width: 300px;
+  }
+}
 </style>
