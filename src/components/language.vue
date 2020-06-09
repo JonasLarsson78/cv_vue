@@ -3,27 +3,24 @@
     <img class="langImg" src="../assets/lang.svg" alt="logo" />
     <div class="langHeader">Språk</div>
     <hr class="hr" />
-    <div class="tagContainer">
-      <div class="tag" v-for="(la, index) in lang.items" :key="index">
-        <span class="tagText">{{ la.authority }}</span>
-      </div>
-    </div>
+    <TagInfo :tags="lang" />
   </div>
 </template>
 
 <script>
 import { data } from '../data/data';
-
+import TagInfo from './taginfo';
 export default {
   name: 'Language',
+  components: { TagInfo },
   data() {
     return {
-      lang: {},
+      lang: [],
     };
   },
   created: function() {
     const find = data.sections.find((x) => x.title === 'Språk');
-    this.lang = find;
+    this.lang = find.items;
   },
 };
 </script>

@@ -32,4 +32,9 @@ export default {
   height: 1px;
   border-color: white;
 }
+@media only screen and (max-device-width: 901px) {
+  .bollHr {
+    width: 80%;
+  }
+}
 </style>

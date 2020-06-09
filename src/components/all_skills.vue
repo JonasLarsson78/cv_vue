@@ -3,27 +3,24 @@
     <img class="allSkillsImg" src="../assets/allskills.svg" alt="logo" />
     <div class="allSkillsHeader">Alla Färdigheter</div>
     <hr class="hr" />
-    <div class="tagContainer">
-      <div class="tag" v-for="(la, index) in items.items" :key="index">
-        <span class="tagText">{{ la }}</span>
-      </div>
-    </div>
+    <TagInfo :tags="items" />
   </div>
 </template>
 
 <script>
 import { data } from '../data/data';
-
+import TagInfo from './taginfo';
 export default {
   name: 'AllSkills',
+  components: { TagInfo },
   data() {
     return {
-      items: {},
+      items: [],
     };
   },
   created: function() {
     const find = data.sections.find((x) => x.title === 'Färdigheter');
-    this.items = find;
+    this.items = find.items;
   },
 };
 </script>

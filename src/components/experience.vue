@@ -36,16 +36,8 @@
             </tr>
           </tbody>
         </table>
-        <div class="tagContainer">
-          <div
-            class="tag"
-            v-show="ed.descriptionTags"
-            v-for="(tag, index) in ed.descriptionTags"
-            :key="index"
-          >
-            <span class="tagText">{{ tag }}</span>
-          </div>
-        </div>
+        <TagInfo :tags="ed.descriptionTags" />
+
         <hr />
       </span>
     </div>
@@ -54,9 +46,10 @@
 
 <script>
 import { data } from '../data/data';
-
+import TagInfo from './taginfo';
 export default {
   name: 'Experience',
+  components: { TagInfo },
   data() {
     return {
       data: {},

@@ -36,16 +36,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="tagContainer">
-          <div
-            class="tag"
-            v-show="ed.descriptionTags"
-            v-for="(tag, index) in ed.descriptionTags"
-            :key="index"
-          >
-            <span class="tagText">{{ tag }}</span>
-          </div>
-        </div>
+        <TagInfo :tags="ed.descriptionTags" />
         <hr />
       </span>
     </div>
@@ -54,9 +45,11 @@
 
 <script>
 import { data } from '../data/data';
+import TagInfo from './taginfo';
 
 export default {
   name: 'Education',
+  components: { TagInfo },
   data() {
     return {
       data: {},
@@ -131,19 +124,7 @@ td {
   display: flex;
   flex-wrap: wrap;
 }
-.tag {
-  height: 30px;
-  background-color: #115e75;
-  width: 150px;
-  border-radius: 15px;
-  margin: 5px;
-}
-.tagText {
-  position: relative;
-  top: 5px;
-  text-align: center;
-  color: white;
-}
+
 @media only screen and (max-device-width: 901px) {
   .educationContanier {
     width: 330px;

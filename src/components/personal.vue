@@ -57,6 +57,15 @@
               >{{ contact.value }}</a
             ></span
           >
+          <span v-else-if="contact.type === 'webpage'">
+            <div><img class="icons" src="../assets/home2.svg" /></div>
+            <a
+              class="iconTextLink"
+              :href="`http://${contact.value}`"
+              target="_blank"
+              >{{ contact.value }}</a
+            ></span
+          >
           <span v-else>
             <div><img class="icons" src="../assets/linkedin.svg" /></div>
             <a
@@ -72,7 +81,7 @@
     <div>
       <div class="personalHeader">OM MIG</div>
       <BollHr />
-      <div @mouseover="hoverTextT" class="omMigText">
+      <div @click="hoverTextT" class="omMigText">
         {{ personal.sections[0].content }}
       </div>
       <div v-if="omMig" class="omMigTextLarge">
@@ -187,6 +196,7 @@ export default {
   text-align: left;
   font-size: 12px;
   padding: 10px;
+  cursor: pointer;
 }
 .omMigTextLarge {
   width: 500px;
@@ -226,7 +236,9 @@ export default {
     left: 50%;
     transform: translate(-50%);
     width: 150px;
+    width: 95%;
   }
+
   .personalImg {
     width: 70px;
     height: 70px;
@@ -244,6 +256,12 @@ export default {
     font-size: 12px;
     font-weight: bold;
     margin-top: 20px;
+  }
+  .omMigText {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 280px;
   }
 }
 </style>
