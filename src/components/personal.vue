@@ -108,7 +108,7 @@
       <Skills str="Mongo DB" name="mongodb" procent="80%" />
       <!-- End skills -->
       <hr class="personalHr" />
-      <div class="version">Cv_Vue V.2.0.2</div>
+      <div class="version">Cv_Vue V.2.0.5</div>
       <div class="end"></div>
     </div>
   </div>
@@ -159,6 +159,9 @@ export default {
 .iconTextLink {
   text-decoration: none;
   color: white;
+}
+.iconTextLink:hover {
+  font-weight: bold;
 }
 .personalContainer {
   width: 250px;

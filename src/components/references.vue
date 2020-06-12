@@ -15,7 +15,17 @@
         <div><b>Titel:</b> {{ person.title }}</div>
         <div class="refOm" v-if="person.text">
           <b>Om Jonas:</b>
-          {{ person.text }}
+          <span
+            title="Stäng"
+            class="arrow"
+            :id="index"
+            v-if="obj[index]"
+            @click="openRef"
+            >⯅</span
+          ><span title="Öppna" class="arrow" :id="index" v-else @click="openRef"
+            >⯆</span
+          ><br />
+          <span v-if="obj[index]">{{ person.text }}</span>
         </div>
         <div>
           <img class="icons" src="../assets/svg/mail2.svg" /><a
@@ -53,16 +63,38 @@ export default {
   data() {
     return {
       references: {},
+      obj: {
+        '0': false,
+        '1': false,
+        '2': false,
+        '3': false,
+        '4': false,
+      },
     };
   },
   created: function() {
     const find = data.sections.find((x) => x.title === 'Referenser');
     this.references = find;
   },
+  methods: {
+    openRef(e) {
+      this.obj[e.target.id] = !this.obj[e.target.id];
+    },
+  },
 };
 </script>
 
 <style scoped>
+.none {
+  display: none;
+}
+.arrow {
+  cursor: pointer;
+  color: #115e75;
+}
+.arrow:hover {
+  color: #1a89aa;
+}
 .icons {
   position: relative;
   top: 7px;

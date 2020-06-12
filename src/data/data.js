@@ -142,7 +142,6 @@ export const data = {
               url: 'https://www.sogeti.se',
               linkedin: 'https://www.linkedin.com/in/majad-in',
               email: 'majad.inayat@sogeti.se',
-              text: '',
             },
           ],
         },
