@@ -32,6 +32,7 @@
           <Language />
           <AllSkills />
           <Hobby />
+          <References />
         </div>
 
         <div @click="nextPage(false)" class="next">
@@ -64,6 +65,7 @@ import Experience from './experience';
 import Language from './language';
 import AllSkills from './all_skills';
 import Hobby from './hobby';
+import References from './references';
 export default {
   name: 'Cv',
   components: {
@@ -73,6 +75,7 @@ export default {
     Language,
     AllSkills,
     Hobby,
+    References,
   },
   data() {
     return {

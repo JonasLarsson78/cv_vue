@@ -18,14 +18,12 @@ export const data = {
   },
   sections: [
     {
-      type: 'text',
       title: 'Karriärprofil',
       content:
         'Sen när jag var barn har jag alltid velat bli webbutvecklare. Nu tror jag att jag är det. Har just nu tagit examen på en tvåårig YH i Helsingborg som gjort att jag nu är Frontend utvecklare. Min kompetens är JavaScript, React.js och Vue.js men även lite Backend med Node.js och Express.js. Ser nu framemot att få jobba med min kompetens i ert företag för att kunna utvecklas både som person och få mer erfarenheter.',
       icon: 'usertie',
     },
     {
-      type: 'common-list',
       title: 'Utbildning',
       icon: 'graduation',
       items: [
@@ -64,7 +62,6 @@ export const data = {
       ],
     },
     {
-      type: 'experiences-list',
       title: 'Arbetslivserfarenhet',
       icon: 'archive',
       items: [
@@ -133,24 +130,40 @@ export const data = {
       ],
     },
     {
-      type: 'projects-list',
       title: 'Referenser',
-      icon: 'tasks',
       groups: [
+        {
+          sectionHeader: 'Sogeti',
+          description: 'LIA 1',
+          items: [
+            {
+              name: 'Inayat Majad',
+              title: 'Webbutvecklare',
+              url: 'https://www.sogeti.se',
+              linkedin: 'https://www.linkedin.com/in/majad-in',
+              email: 'majad.inayat@sogeti.se',
+              text: '',
+            },
+          ],
+        },
         {
           sectionHeader: 'Sogeti',
           description: 'LIA 2',
           items: [
             {
-              title: 'Alexander Persson',
-              projectUrl: 'https://www.linkedin.com/in/alexanderpersson/',
+              name: 'Alexander Persson',
+              title: 'Fullstack utvecklare',
+              url: 'https://www.sogeti.se',
+              linkedin: 'https://www.linkedin.com/in/alexanderpersson',
+              email: 'alexander.persson@sogeti.se',
+              text:
+                '"Jonas Larsson är en jordnära utvecklare som dels är grym på css och javascript. Han har under de senaste 12 veckorna varit på praktik i mitt team där han fått lära sig lite vue.js, mongodb samt google functions. Han har varit involverad i att utveckla authentication i appen vi bygger - vilket han löst på ett snyggt sätt."',
             },
           ],
         },
       ],
     },
     {
-      type: 'common-list',
       title: 'Språk',
       icon: 'language',
       items: ['Svenska', 'Engelska'],
@@ -178,7 +191,6 @@ export const data = {
       ],
     },
     {
-      type: 'tag-list',
       title: 'Hobbys & Intressen',
       icon: 'cubes',
       items: ['Teknik', 'Film/Serier', 'Trädgård', 'Familj/Vänner'],
