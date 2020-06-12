@@ -149,4 +149,12 @@ export default {
 .end {
   margin-bottom: 20px;
 }
+@media only screen and (max-device-width: 901px) {
+  .referenceContanier {
+    top: 200px;
+  }
+  .referenceImg {
+    left: -150px;
+  }
+}
 </style>

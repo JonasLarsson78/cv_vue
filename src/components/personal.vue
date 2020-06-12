@@ -30,51 +30,77 @@
       >
         <div class="iconsText">
           <span v-if="contact.type === 'location'">
-            <div><img class="icons" src="../assets/svg/location.svg" /></div>
-            {{ contact.value }}</span
-          >
-          <span v-else-if="contact.type === 'phone'"
-            ><div><img class="icons" src="../assets/svg/phone.svg" /></div>
-            {{ contact.value }}</span
-          >
+            <div>
+              <img class="icons" src="../assets/svg/location.svg" />
+            </div>
+            <a
+              class="iconTextLink"
+              :href="
+                `${contact.value.url}+${contact.value.address}+${contact.value.nr}+${contact.value.zip}+${contact.value.city}`
+              "
+              target="_blank"
+            >
+              {{ contact.value.city }}
+            </a>
+          </span>
+          <span v-else-if="contact.type === 'phone'">
+            <div>
+              <img class="icons" src="../assets/svg/phone.svg" />
+            </div>
+            <a class="iconTextLink" :href="`tel:${contact.value}`">{{
+              contact.value
+            }}</a>
+          </span>
 
           <span v-else-if="contact.type === 'email'">
-            <div><img class="icons" src="../assets/svg/mail.svg" /></div>
+            <div>
+              <img class="icons" src="../assets/svg/mail.svg" />
+            </div>
             <a
               class="iconTextLink"
               :href="`mailto:${contact.value}`"
               target="_blank"
-              >{{ contact.value }}</a
-            ></span
-          >
+            >
+              {{ contact.value }}
+            </a>
+          </span>
 
           <span v-else-if="contact.type === 'github'">
-            <div><img class="icons" src="../assets/svg/github.svg" /></div>
+            <div>
+              <img class="icons" src="../assets/svg/github.svg" />
+            </div>
             <a
               class="iconTextLink"
               :href="`http://${contact.value}`"
               target="_blank"
-              >{{ contact.value }}</a
-            ></span
-          >
+            >
+              {{ contact.value }}
+            </a>
+          </span>
           <span v-else-if="contact.type === 'webpage'">
-            <div><img class="icons" src="../assets/svg/home2.svg" /></div>
+            <div>
+              <img class="icons" src="../assets/svg/home2.svg" />
+            </div>
             <a
               class="iconTextLink"
               :href="`http://${contact.value}`"
               target="_blank"
-              >{{ contact.value }}</a
-            ></span
-          >
+            >
+              {{ contact.value }}
+            </a>
+          </span>
           <span v-else>
-            <div><img class="icons" src="../assets/svg/linkedin.svg" /></div>
+            <div>
+              <img class="icons" src="../assets/svg/linkedin.svg" />
+            </div>
             <a
               class="iconTextLink"
               :href="`http://${contact.value}`"
               target="_blank"
-              >{{ contact.value }}</a
-            ></span
-          >
+            >
+              {{ contact.value }}
+            </a>
+          </span>
         </div>
       </div>
     </div>
@@ -85,10 +111,9 @@
         {{ personal.sections[0].content }}
       </div>
       <div v-if="omMig" class="omMigTextLarge">
-        {{ personal.sections[0].content }}<br /><button
-          class="closeBtn"
-          @click="hoverTextF"
-        >
+        {{ personal.sections[0].content }}
+        <br />
+        <button class="closeBtn" @click="hoverTextF">
           Stäng
         </button>
       </div>

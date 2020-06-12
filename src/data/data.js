@@ -8,7 +8,16 @@ export const data = {
       { type: 'email', value: 'jl.7804@gmail.com' },
       { type: 'phone', value: '0706444922' },
 
-      { type: 'location', value: 'Helsingborg' },
+      {
+        type: 'location',
+        value: {
+          city: 'Helsingborg',
+          address: 'Lägervägen',
+          nr: '23A',
+          zip: '25456',
+          url: 'https://www.google.se/maps/place/',
+        },
+      },
       {
         type: 'linkedin',
         value: 'linkedin.com/in/jonlarsson',

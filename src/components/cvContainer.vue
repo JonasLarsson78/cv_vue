@@ -186,7 +186,7 @@ export default {
   .cvContainer2 {
     width: 360px;
     flex-direction: column;
-    height: 1150px;
+    height: 1850px;
   }
   .footerLink {
     bottom: 35px;
