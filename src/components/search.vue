@@ -116,4 +116,9 @@ export default {
 .from {
   font-size: 12px;
 }
+@media only screen and (max-device-width: 901px) {
+  .searchContainer {
+    display: none;
+  }
+}
 </style>
