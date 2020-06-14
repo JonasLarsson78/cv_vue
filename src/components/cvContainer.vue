@@ -1,5 +1,6 @@
 <template>
   <span>
+    <Search />
     <span v-if="!this.next">
       <div class="cvContainer">
         <Personal />
@@ -66,6 +67,7 @@ import Language from './language';
 import AllSkills from './all_skills';
 import Hobby from './hobby';
 import References from './references';
+import Search from './search';
 export default {
   name: 'Cv',
   components: {
@@ -76,6 +78,7 @@ export default {
     AllSkills,
     Hobby,
     References,
+    Search,
   },
   data() {
     return {
