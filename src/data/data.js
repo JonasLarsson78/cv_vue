@@ -29,7 +29,7 @@ export const data = {
     {
       title: 'Karriärprofil',
       content:
-        'Sen när jag var barn har jag alltid velat bli webbutvecklare. Nu tror jag att jag är det. Har just nu tagit examen på en tvåårig YH i Helsingborg som gjort att jag nu är Frontend utvecklare. Min kompetens är JavaScript, React.js och Vue.js men även lite Backend med Node.js och Express.js. Ser nu framemot att få jobba med min kompetens i ert företag för att kunna utvecklas både som person och få mer erfarenheter.',
+        'Sen när jag var barn har jag alltid velat bli webbutvecklare. Nu är jag det. Jag tog examen på en tvåårig YH (Frontend utvecklare) i Helsingborg. Min kompetens är JavaScript, React.js och Vue.js men även lite Backend med Node.js och Express.js. Jobbar just nu på ett jämförelse företag som systemutvecklare där jag trivs mycket bra men har alltid ett öga öppet för nya utmaningar.',
       icon: 'usertie',
     },
     {
@@ -75,6 +75,22 @@ export const data = {
       icon: 'archive',
       items: [
         {
+          title: 'System Utvecklare',
+          company: 'Zmarta Group Ängelholm',
+          description: 'Webbutvekling',
+          companyWebSite: 'https://zmarta.se',
+          companyMeta: '',
+          datesBetween: '2020.03 - Nuvarande',
+          descriptionTags: [
+            'Vue.js',
+            'Jira',
+            'JavaScript',
+            'GitLab',
+            'Node.js',
+            'Git',
+          ],
+        },
+        {
           title: 'Frontend Utvecklare',
           company: 'Sogeti Skåne Helsingborg',
           description: 'Praktik(LIA2)',
@@ -110,7 +126,6 @@ export const data = {
           title: 'Budbilsförare',
           company: 'Schenker Åker AB',
           description: 'Arbetamed att köra ut paket.',
-          companyWebSite: 'https://www.dbschenker.com/se-sv',
           companyMeta: '',
           datesBetween: '2017.03 - 2017.12',
           descriptionTags: ['Pakethantering', 'Köra bil', 'GPS'],
@@ -128,13 +143,6 @@ export const data = {
             'Klippmaskiner',
             'mm',
           ],
-        },
-        {
-          title: 'Budbilsförare',
-          company: 'Hemmalivs AB',
-          description: 'Matkassar online.',
-          datesBetween: '2007 - 2008',
-          descriptionTags: ['Matkassar', 'Budbil'],
         },
       ],
     },

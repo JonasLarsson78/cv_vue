@@ -9,21 +9,21 @@
           <Experience />
         </div>
         <div @click="nextPage(true)" class="next">
-          Nästa sida
+          {{content.next}}
           <span
             ><img class="arrowImgNext" src="../assets/svg/arrow.svg" alt="logo"
           /></span>
         </div>
         <div class="footerLink">
-          Koden till CV på
+          {{content.place}}
           <a
             class="footerLinkText"
             href="https://github.com/JonasLarsson78/cv_vue"
             target="_blank"
-            >Github</a
+            >{{content.github}}</a
           >
         </div>
-        <div class="footerText">© 2020 Jonas Larsson All Rights Reserved</div>
+        <div class="footerText">{{content.copy || ''}}</div>
       </div>
     </span>
     <span v-else>
@@ -41,35 +41,36 @@
             class="arrowImgPrev"
             src="../assets/svg/arrow.svg"
             alt="logo"
-          />Tillbaka
+          />{{content.back}}
           <span></span>
         </div>
         <div class="footerLink">
-          Koden till CV på
+          {{content.place}}
           <a
             class="footerLinkText"
             href="https://github.com/JonasLarsson78/cv_vue"
             target="_blank"
-            >Github</a
+            >{{content.github}}</a
           >
         </div>
-        <div class="footerText">© 2020 Jonas Larsson All Rights Reserved</div>
+        <div class="footerText">{{content.copy || ''}}</div>
       </div>
     </span>
   </span>
 </template>
 
 <script>
-import Personal from './personal';
-import Education from './education';
-import Experience from './experience';
-import Language from './language';
-import AllSkills from './all_skills';
-import Hobby from './hobby';
-import References from './references';
-import Search from './search';
+import Personal from "../components/personal";
+import Education from "../components/education";
+import Experience from "../components/experience";
+import Language from "../components/language";
+import AllSkills from "../components/all_skills";
+import Hobby from "../components/hobby";
+import References from "../components/references";
+import Search from "../components/search";
+import { text } from "../data/text"
 export default {
-  name: 'Cv',
+  name: "Cv",
   components: {
     Personal,
     Education,
@@ -83,7 +84,11 @@ export default {
   data() {
     return {
       next: false,
+      content: {},
     };
+  },
+  created() {
+    this.content = {...text}
   },
   methods: {
     scrollToTop() {

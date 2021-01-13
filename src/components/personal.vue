@@ -133,7 +133,7 @@
       <Skills str="Mongo DB" name="mongodb" procent="80%" />
       <!-- End skills -->
       <hr class="personalHr" />
-      <div class="version">Cv_Vue V.2.1.0</div>
+      <div class="version">{{content.version}}</div>
       <div class="end"></div>
     </div>
   </div>
@@ -143,6 +143,7 @@
 import { data } from '../data/data';
 import BollHr from './bollHr';
 import Skills from './skills';
+import { text } from '../data/text'
 export default {
   name: 'Personal',
   components: { BollHr, Skills },
@@ -152,7 +153,11 @@ export default {
       personal: data,
       imgHover: false,
       omMig: false,
+      content: null,
     };
+  },
+    created() {
+    this.content = {...text}
   },
   methods: {
     hoverImg(bool) {
