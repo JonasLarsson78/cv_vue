@@ -140,24 +140,23 @@
 </template>
 
 <script>
-import { data } from '../data/data';
 import BollHr from './bollHr';
 import Skills from './skills';
-import { text } from '../data/text'
 export default {
   name: 'Personal',
   components: { BollHr, Skills },
 
   data() {
     return {
-      personal: data,
+      personal: {},
       imgHover: false,
       omMig: false,
       content: null,
     };
   },
     created() {
-    this.content = {...text}
+    this.personal = this.$store.getters.getData
+    this.content = this.$store.getters.getText
   },
   methods: {
     hoverImg(bool) {

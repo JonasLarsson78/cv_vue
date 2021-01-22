@@ -1,6 +1,6 @@
-export const text = {
+export default {
     copy: '© 2021 Jonas Larsson All Rights Reserved',
-    version: 'Cv_Vue V.2.2.0',
+    version: 'Cv_Vue/Vuex V.2.5.0',
     next: 'Nästa sida',
     back: 'Tillbaka',
     place: 'Koden till CV på',

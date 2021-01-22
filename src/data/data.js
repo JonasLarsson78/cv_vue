@@ -1,4 +1,4 @@
-export const data = {
+export default {
   personalData: {
     name: 'Jonas Larsson',
     title: 'Webbutvecklare',

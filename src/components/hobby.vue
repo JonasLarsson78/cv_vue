@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import { data } from '../data/data';
-
 export default {
   name: 'Hobby',
   data() {
@@ -21,8 +19,8 @@ export default {
       hobbys: {},
     };
   },
-  created: function() {
-    const find = data.sections.find((x) => x.title === 'Hobbys & Intressen');
+  created() {
+    const find = this.$store.getters.getData.sections.find((x) => x.title === 'Hobbys & Intressen');
     this.hobbys = find;
   },
 };

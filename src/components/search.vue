@@ -25,12 +25,11 @@
 </template>
 
 <script>
-import { tagInfo } from '../data/tagInfo';
 export default {
   name: 'Search',
   data() {
     return {
-      info: tagInfo,
+      info: {},
       inputData: '',
       searchData: [],
       openModal: false,
@@ -48,6 +47,9 @@ export default {
         this.searchData = [];
       }
     },
+  },
+  created() {
+    this.info = this.$store.getters.getTagInfo
   },
   methods: {
     clickOpenInfo(e) {

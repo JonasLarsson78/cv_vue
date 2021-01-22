@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import { data } from '../data/data';
 import TagInfo from './taginfo';
 export default {
   name: 'Language',
@@ -18,8 +17,8 @@ export default {
       lang: [],
     };
   },
-  created: function() {
-    const find = data.sections.find((x) => x.title === 'Språk');
+  created() {
+    const find = this.$store.getters.getData.sections.find((x) => x.title === 'Språk');
     this.lang = find.items;
   },
 };

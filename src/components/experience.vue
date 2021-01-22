@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import { data } from '../data/data';
 import TagInfo from './taginfo';
 export default {
   name: 'Experience',
@@ -55,8 +54,8 @@ export default {
       data: {},
     };
   },
-  created: function() {
-    const find = data.sections.find((x) => x.title === 'Arbetslivserfarenhet');
+  created() {
+    const find = this.$store.getters.getData.sections.find((x) => x.title === 'Arbetslivserfarenhet');
     this.data = find;
   },
 };

@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import { data } from '../data/data';
 import TagInfo from './taginfo';
 export default {
   name: 'AllSkills',
@@ -18,8 +17,8 @@ export default {
       items: [],
     };
   },
-  created: function() {
-    const find = data.sections.find((x) => x.title === 'Färdigheter');
+  created() {
+    const find = this.$store.getters.getData.sections.find((x) => x.title === 'Färdigheter');
     this.items = find.items;
   },
 };

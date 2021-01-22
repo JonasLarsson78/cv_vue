@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import { tagInfo } from '../data/tagInfo';
 export default {
   name: 'TagInfo',
   props: {
@@ -28,7 +27,6 @@ export default {
   },
   data() {
     return {
-      tagInfo,
       text: {},
       open: false,
     };
@@ -36,7 +34,7 @@ export default {
 
   methods: {
     findTag(str) {
-      const find = tagInfo.find((x) => x.items === str);
+      const find = this.$store.getters.getTagInfo.find((x) => x.items === str);
       if (find) {
         this.text = find;
         this.open = true;

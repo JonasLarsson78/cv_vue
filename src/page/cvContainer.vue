@@ -68,7 +68,7 @@ import AllSkills from "../components/all_skills";
 import Hobby from "../components/hobby";
 import References from "../components/references";
 import Search from "../components/search";
-import { text } from "../data/text"
+import Data  from '../data';
 export default {
   name: "Cv",
   components: {
@@ -88,7 +88,10 @@ export default {
     };
   },
   created() {
-    this.content = {...text}
+    this.$store.commit('setData', Data.data)
+    this.$store.commit('setText', Data.text)
+    this.$store.commit('setTagInfo', Data.tagInfo)
+    this.content = Data.text
   },
   methods: {
     scrollToTop() {

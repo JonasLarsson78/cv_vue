@@ -15,7 +15,7 @@ export default {
     name: String,
     procent: String,
   },
-  created: function() {
+  created() {
     let root = document.documentElement;
     root.style.setProperty(`--procent${this.name}`, this.procent);
   },

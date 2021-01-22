@@ -57,7 +57,6 @@
 </template>
 
 <script>
-import { data } from '../data/data';
 export default {
   name: 'References',
   data() {
@@ -72,8 +71,8 @@ export default {
       },
     };
   },
-  created: function() {
-    const find = data.sections.find((x) => x.title === 'Referenser');
+  created() {
+    const find = this.$store.getters.getData.sections.find((x) => x.title === 'Referenser');
     this.references = find;
   },
   methods: {

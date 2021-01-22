@@ -1,4 +1,4 @@
-export const tagInfo = [
+export default [
   {
     // Data Skills
     items: 'HTML',
