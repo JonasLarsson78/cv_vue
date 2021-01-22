@@ -40,7 +40,7 @@ export default {
           title: 'Frontend Utvecklare YH',
           authority: 'EC Utbildning',
           authorityWebSite:
-            'https://www.ecutbildning.se/utbildningar/frontend-utvecklare/',
+            'https://ecutbildning.se/utbildningar/frontendutvecklare/?location=1697',
           rightSide: '2018 - 2020',
           certificate:
             'https://jonas78dev-5798.restdb.io/media/5edfd2ae498ad76800019dd8',
