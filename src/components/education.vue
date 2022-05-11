@@ -21,29 +21,14 @@
             </tr>
             <tr v-if="ed.authorityWebSite">
               <td colspan="3">
-                <img
-                  class="educationImgLink"
-                  src="../assets/svg/home.svg"
-                  alt="logo"
-                />
-                <a
-                  class="edLink"
-                  :href="`${ed.authorityWebSite}`"
-                  target="_blank"
-                  >Hemsida</a
-                >
+                <img class="educationImgLink" src="../assets/svg/home.svg" alt="logo" />
+                <a class="edLink" :href="`${ed.authorityWebSite}`" target="_blank">Hemsida</a>
               </td>
             </tr>
             <tr v-if="ed.certificate">
               <td colspan="3">
-                <img
-                  class="educationImgLink"
-                  src="../assets/svg/utbilding.svg"
-                  alt="logo"
-                />
-                <a class="edLink" :href="`${ed.certificate}`" target="_blank"
-                  >Examensbevis</a
-                >
+                <img class="educationImgLink" src="../assets/svg/utbilding.svg" alt="logo" />
+                <a class="edLink" :href="`${ed.certificate}`" target="_blank">Examensbevis</a>
               </td>
             </tr>
           </tbody>
@@ -77,6 +62,7 @@ export default {
 th {
   text-align: left;
 }
+
 td {
   text-align: left;
 }
@@ -91,6 +77,7 @@ td {
   padding: 10px;
   color: black;
 }
+
 .educationHeader {
   position: relative;
   top: -17px;
@@ -100,6 +87,7 @@ td {
   font-size: 20px;
   font-weight: bold;
 }
+
 .educationImg {
   position: relative;
   top: 10px;
@@ -107,30 +95,37 @@ td {
   width: 30px;
   filter: #115e75;
 }
+
 .educationImgLink {
   position: relative;
   top: 3px;
   width: 20px;
 }
+
 .educationTables {
   width: 100%;
   padding: 5px;
 }
+
 .tdDatum {
   width: 150px;
 }
+
 .tdTitle {
   width: 200px;
   font-weight: bold;
 }
+
 .edLink {
   margin-left: 5px;
   text-decoration: none;
   color: #115e75;
 }
+
 .edLink:hover {
   font-weight: bold;
 }
+
 .tagContainer {
   display: flex;
   flex-wrap: wrap;
@@ -138,8 +133,9 @@ td {
 
 @media only screen and (max-device-width: 901px) {
   .educationContanier {
-    width: 330px;
+    width: 320px;
   }
+
   .educationImg {
     left: -150px;
   }

@@ -1,11 +1,7 @@
 <template>
   <div class="personalContainer">
     <div>
-      <img
-        class="personalImg"
-        src="../assets/jonas.jpg"
-        @mouseenter="hoverImg(true)"
-      />
+      <img class="personalImg" src="../assets/jonas.jpg" @mouseenter="hoverImg(true)" />
       <div class="personalName">
         {{ personal.personalData.name.toUpperCase() }}
       </div>
@@ -17,22 +13,15 @@
     <div>
       <div class="personalHeader">KONTAKTA MIG</div>
       <BollHr />
-      <div
-        v-for="(contact, index) in personal.personalData.contacts"
-        :key="index"
-      >
+      <div v-for="(contact, index) in personal.personalData.contacts" :key="index">
         <div class="iconsText">
           <span v-if="contact.type === 'location'">
             <div>
               <img class="icons" src="../assets/svg/location.svg" />
             </div>
-            <a
-              class="iconTextLink"
-              :href="
-                `${contact.value.url}+${contact.value.address}+${contact.value.nr}+${contact.value.zip}+${contact.value.city}`
-              "
-              target="_blank"
-            >
+            <a class="iconTextLink" :href="
+              `${contact.value.url}+${contact.value.address}+${contact.value.nr}+${contact.value.zip}+${contact.value.city}`
+            " target="_blank">
               {{ contact.value.city }}
             </a>
           </span>
@@ -41,7 +30,7 @@
               <img class="icons" src="../assets/svg/phone.svg" />
             </div>
             <a class="iconTextLink" :href="`tel:${contact.value}`">{{
-              contact.value
+                contact.value
             }}</a>
           </span>
 
@@ -49,11 +38,7 @@
             <div>
               <img class="icons" src="../assets/svg/mail.svg" />
             </div>
-            <a
-              class="iconTextLink"
-              :href="`mailto:${contact.value}`"
-              target="_blank"
-            >
+            <a class="iconTextLink" :href="`mailto:${contact.value}`" target="_blank">
               {{ contact.value }}
             </a>
           </span>
@@ -62,11 +47,7 @@
             <div>
               <img class="icons" src="../assets/svg/github.svg" />
             </div>
-            <a
-              class="iconTextLink"
-              :href="`http://${contact.value}`"
-              target="_blank"
-            >
+            <a class="iconTextLink" :href="`http://${contact.value}`" target="_blank">
               {{ contact.value }}
             </a>
           </span>
@@ -74,11 +55,7 @@
             <div>
               <img class="icons" src="../assets/svg/home2.svg" />
             </div>
-            <a
-              class="iconTextLink"
-              :href="`http://${contact.value}`"
-              target="_blank"
-            >
+            <a class="iconTextLink" :href="`http://${contact.value}`" target="_blank">
               {{ contact.value }}
             </a>
           </span>
@@ -86,11 +63,7 @@
             <div>
               <img class="icons" src="../assets/svg/linkedin.svg" />
             </div>
-            <a
-              class="iconTextLink"
-              :href="`http://${contact.value}`"
-              target="_blank"
-            >
+            <a class="iconTextLink" :href="`http://${contact.value}`" target="_blank">
               {{ contact.value }}
             </a>
           </span>
@@ -178,41 +151,49 @@ export default {
   margin-bottom: 10px;
   text-decoration: none;
 }
+
 .iconTextLink {
   text-decoration: none;
   color: white;
 }
+
 .iconTextLink:hover {
   font-weight: bold;
 }
+
 .personalContainer {
   width: 250px;
   min-height: 500px;
   background-color: #115e75;
   border-radius: 5px;
 }
+
 .personalImg {
   width: 145px;
   border-radius: 70px;
   margin-top: 25px;
 }
+
 .personalName {
   font-size: 20px;
   font-weight: bold;
   color: white;
   margin-top: 10px;
 }
+
 .personalTitle {
   font-size: 14px;
   color: white;
   margin-top: 2px;
 }
+
 .personalHeader {
   color: white;
   font-size: 16px;
   font-weight: bold;
   margin-top: 40px;
 }
+
 .personalHr {
   position: relative;
   left: 50%;
@@ -221,12 +202,14 @@ export default {
   margin-bottom: 10px;
   width: 160px;
 }
+
 .omMigText {
   text-align: left;
   font-size: 12px;
   padding: 10px;
   cursor: pointer;
 }
+
 .omMigTextLarge {
   width: 500px;
   height: 180px;
@@ -243,6 +226,7 @@ export default {
   border-radius: 5px;
   box-shadow: 10px 10px 5px 0px #000000bf;
 }
+
 .closeBtn {
   position: relative;
   cursor: pointer;
@@ -257,17 +241,21 @@ export default {
   font-size: 16px;
   outline: none;
 }
+
 .closeBtn:hover {
   background-color: #1881a1;
 }
+
 .end {
   padding-bottom: 20px;
 }
+
 .version {
   position: relative;
   top: 14px;
   font-size: 12px;
 }
+
 @media only screen and (max-device-width: 901px) {
   .personalContainer {
     position: relative;
@@ -279,16 +267,17 @@ export default {
 
   .personalImg {
     width: 70px;
-    height: 70px;
     border-radius: 35px;
     margin-top: 20px;
   }
+
   .personalName {
     font-size: 14px;
     font-weight: bold;
     color: white;
     margin-top: 10px;
   }
+
   .personalHeader {
     color: white;
     font-size: 12px;

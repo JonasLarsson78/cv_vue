@@ -54,8 +54,6 @@ export default {
             'Node.js',
             'Agila-metoder',
             'Examensarbete',
-            'LIA1',
-            'LIA2',
           ],
         },
         {
@@ -138,10 +136,8 @@ export default {
           descriptionTags: [
             'Hårfärg',
             'Saxar',
-            'Schampo',
             'Hårfön',
             'Klippmaskiner',
-            'mm',
           ],
         },
       ],
