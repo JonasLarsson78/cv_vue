@@ -2,16 +2,9 @@
   <div class="personalContainer">
     <div>
       <img
-        v-if="!imgHover"
         class="personalImg"
-        :src="`${personal.personalData.image}`"
+        src="../assets/jonas.jpg"
         @mouseenter="hoverImg(true)"
-      />
-      <img
-        v-else
-        class="personalImg"
-        src="../assets/profile_img.jpg"
-        @mouseleave="hoverImg(false)"
       />
       <div class="personalName">
         {{ personal.personalData.name.toUpperCase() }}
@@ -133,17 +126,17 @@
       <Skills str="Mongo DB" name="mongodb" procent="80%" />
       <!-- End skills -->
       <hr class="personalHr" />
-      <div class="version">{{content.version}}</div>
+      <div class="version">{{ content.version }}</div>
       <div class="end"></div>
     </div>
   </div>
 </template>
 
 <script>
-import BollHr from './bollHr';
-import Skills from './skills';
+import BollHr from "./bollHr";
+import Skills from "./skills";
 export default {
-  name: 'Personal',
+  name: "Personal",
   components: { BollHr, Skills },
 
   data() {
@@ -154,9 +147,9 @@ export default {
       content: null,
     };
   },
-    created() {
-    this.personal = this.$store.getters.getData
-    this.content = this.$store.getters.getText
+  created() {
+    this.personal = this.$store.getters.getData;
+    this.content = this.$store.getters.getText;
   },
   methods: {
     hoverImg(bool) {
@@ -200,7 +193,6 @@ export default {
 }
 .personalImg {
   width: 145px;
-  height: 145px;
   border-radius: 70px;
   margin-top: 25px;
 }
