@@ -9,21 +9,21 @@
           <Experience />
         </div>
         <div @click="nextPage(true)" class="next">
-          {{content.next}}
+          {{ content.next }}
           <span
             ><img class="arrowImgNext" src="../assets/svg/arrow.svg" alt="logo"
           /></span>
         </div>
         <div class="footerLink">
-          {{content.place}}
+          {{ content.place }}
           <a
             class="footerLinkText"
             href="https://github.com/JonasLarsson78/cv_vue"
             target="_blank"
-            >{{content.github}}</a
+            >{{ content.github }}</a
           >
         </div>
-        <div class="footerText">{{content.copy || ''}}</div>
+        <div class="footerText">{{ content.copy || "" }}</div>
       </div>
     </span>
     <span v-else>
@@ -41,34 +41,34 @@
             class="arrowImgPrev"
             src="../assets/svg/arrow.svg"
             alt="logo"
-          />{{content.back}}
+          />{{ content.back }}
           <span></span>
         </div>
         <div class="footerLink">
-          {{content.place}}
+          {{ content.place }}
           <a
             class="footerLinkText"
             href="https://github.com/JonasLarsson78/cv_vue"
             target="_blank"
-            >{{content.github}}</a
+            >{{ content.github }}</a
           >
         </div>
-        <div class="footerText">{{content.copy || ''}}</div>
+        <div class="footerText">{{ content.copy || "" }}</div>
       </div>
     </span>
   </span>
 </template>
 
 <script>
-import Personal from "../components/personal";
-import Education from "../components/education";
-import Experience from "../components/experience";
-import Language from "../components/language";
-import AllSkills from "../components/all_skills";
-import Hobby from "../components/hobby";
-import References from "../components/references";
-import Search from "../components/search";
-import Data  from '../data';
+import Personal from "../components/personal"
+import Education from "../components/education"
+import Experience from "../components/experience"
+import Language from "../components/language"
+import AllSkills from "../components/all_skills"
+import Hobby from "../components/hobby"
+import References from "../components/references"
+import Search from "../components/search"
+import Data from "../data"
 export default {
   name: "Cv",
   components: {
@@ -85,24 +85,24 @@ export default {
     return {
       next: false,
       content: {},
-    };
+    }
   },
   created() {
-    this.$store.commit('setData', Data.data)
-    this.$store.commit('setText', Data.text)
-    this.$store.commit('setTagInfo', Data.tagInfo)
+    this.$store.commit("setData", Data.data)
+    this.$store.commit("setText", Data.text)
+    this.$store.commit("setTagInfo", Data.tagInfo)
     this.content = Data.text
   },
   methods: {
     scrollToTop() {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0)
     },
     nextPage(bool) {
-      this.next = bool;
-      this.scrollToTop();
+      this.next = bool
+      this.scrollToTop()
     },
   },
-};
+}
 </script>
 
 <style scoped>
