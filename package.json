@@ -10,7 +10,7 @@
     "deploy": "vue-cli-service build && firebase deploy"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "core-js": "^3.6.5",
     "social-icon": "^1.2.1",
     "vue": "^2.6.11",
